@@ -21,8 +21,8 @@ const forecast = (latitude,longtude, callback) =>{
         }
         else
         {
-               //console.log('data',body.latitude)
-                callback(undefined, response.body.daily.data[0].summary+' it is currently '+response.body.currently.temperature+' degree out . these is '
+               console.log('data',response.body.daily.data[0])
+                callback(undefined, response.body.daily.data[0].summary+' it is currently '+response.body.currently.temperature+' degree out . The high today is '+ response.body.daily.data[0].temperatureHigh  + ' with a low of '+response.body.daily.data[0].temperatureLow +' these is '
                 +response.body.currently.precipProbability+' % of chance of rain')
         }
 
